@@ -1,75 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luxury Stay Hotel</title>
 
 <style>
-
 body{
-margin:0;
-font-family:Arial;
-background:#f5f7fa;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f5f7fa;
 }
 
 /* header */
-
 header{
-background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
-color:white;
-text-align:center;
-padding:40px;
+  background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
+
+header h1{
+  margin:0;
+  font-size:40px;
 }
 
 /* navigation */
-
 nav{
-background:#222;
-padding:12px;
-text-align:center;
+  background:#222;
+  padding:12px;
+  text-align:center;
+  position:sticky;
+  top:0;
 }
 
 nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-weight:bold;
+  color:white;
+  margin:15px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
 }
 
 nav a:hover{
-color:#ffd369;
+  color:#ffd369;
 }
 
 /* hero */
-
 .hero{
-text-align:center;
-padding:60px;
-background:white;
+  text-align:center;
+  padding:80px 20px;
+  background:url('https://images.unsplash.com/photo-1501117716987-c8e1ecb210c3') no-repeat center/cover;
+  color:white;
 }
 
 .hero h1{
-color:#2c5364;
-font-size:38px;
+  font-size:42px;
+}
+
+.hero p{
+  font-size:18px;
+  margin-bottom:20px;
 }
 
 .btn{
-background:#2c5364;
-color:white;
-padding:12px 20px;
-border:none;
-border-radius:6px;
-text-decoration:none;
+  background:#ffd369;
+  color:#222;
+  padding:12px 25px;
+  border:none;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#ffb703;
+}
+
+/* features section */
+.features{
+  display:flex;
+  justify-content:space-around;
+  padding:40px 20px;
+  background:white;
+}
+
+.feature-box{
+  width:30%;
+  text-align:center;
+}
+
+.feature-box h3{
+  color:#2c5364;
 }
 
 /* footer */
-
 footer{
-text-align:center;
-background:#222;
-color:white;
-padding:12px;
-margin-top:20px;
+  text-align:center;
+  background:#222;
+  color:white;
+  padding:15px;
+  margin-top:20px;
+}
+
+@media(max-width:768px){
+  .features{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .feature-box{
+    width:80%;
+    margin-bottom:20px;
+  }
 }
 
 </style>
@@ -84,29 +128,36 @@ margin-top:20px;
 </header>
 
 <nav>
-
 <a href="index.html">Home</a>
 <a href="rooms.html">Rooms</a>
 <a href="booking.html">Book Now</a>
-
+<a href="contact.html">Contact</a>
 </nav>
 
 <div class="hero">
-
 <h1>Welcome to Our Hotel</h1>
-
 <p>Experience luxury rooms at affordable price</p>
-
 <a class="btn" href="rooms.html">View Rooms</a>
-
 </div>
 
+<section class="features">
+  <div class="feature-box">
+    <h3>Luxury Rooms</h3>
+    <p>Spacious and comfortable rooms with modern design.</p>
+  </div>
+  <div class="feature-box">
+    <h3>Free Wi-Fi</h3>
+    <p>High-speed internet available in all areas.</p>
+  </div>
+  <div class="feature-box">
+    <h3>24/7 Service</h3>
+    <p>Round-the-clock customer support and service.</p>
+  </div>
+</section>
+
 <footer>
-
-<p>© 2026 Hotel Booking Website</p>
-
+<p>© 2026 Hotel Booking Website | All Rights Reserved</p>
 </footer>
 
 </body>
-
 </html>
